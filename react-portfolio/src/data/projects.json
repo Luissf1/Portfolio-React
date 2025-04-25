@@ -5,7 +5,7 @@
     "description": "The Car Rental Mobile App is a comprehensive mobile application developed using Flutter and Dart, with a backend powered by Firebase Realtime Database. This app allows users to easily browse, book, and manage car rentals. ",
     "skills": ["Dart", "Flutter", "FireBase"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/Luissf1/Renta_AutomovilAPP"
   },
   {
     "title": "Forum App",
@@ -13,7 +13,7 @@
     "description": "The Forum App is an engaging mobile application designed for community interaction, created using PHP Laravel for the backend API and Flutter for the frontend. This app enables users to create, participate in, and manage discussion threads on various topics.",
     "skills": ["Laravel", "PHP", "Flutter", "SQL"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/Luissf1/ForumAPP"
   },
   {
     "title": "Academic Event Organizer",
@@ -21,6 +21,6 @@
     "description": "The Academic Event Organizer is a web application designed to streamline the administration of postgraduate events. Developed using PHP Laravel, this app offers a comprehensive platform for managing event details, schedules, registrations, and communications.",
     "skills": ["Laravel", "PHP", "SQL"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/Luissf1/EventosAcademicos"
   }
 ]

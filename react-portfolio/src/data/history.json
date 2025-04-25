@@ -5,7 +5,7 @@
     "startDate": "Nov, 2023",
     "endDate": "Dec, 2023",
     "experiences": ["Imparted web arquitecture course"],
-    "imageSrc": "history/microsoft.png"
+    "imageSrc": "history/vasconcelos.png"
   },
   {
     "role": "Business Analyst Intern",
@@ -16,6 +16,6 @@
       "Database design and analysis",
       "Helped design UI components"
     ],
-    "imageSrc": "history/netflix.png"
+    "imageSrc": "history/clever.png"
   }
 ]
