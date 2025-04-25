@@ -1,12 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  css:{
-    modules:{
-      localsConvention:'camelCase'
-    }
-  }
-})
+  plugins: [
+    react({
+      jsxRuntime: 'classic', // Add this if you're not using the new JSX transform
+    }),
+  ],
+  esbuild: {
+    jsx: 'automatic', // This enables the new JSX transform
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+      },
+    },
+  },
+});

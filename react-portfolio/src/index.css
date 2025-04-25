@@ -1,10 +1,23 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
+/* src/index.css or your main CSS file */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #2c3e50;
+  --bg-secondary: #f8f9fa;
+  --text-secondary: #6c757d;
+  --accent-color: #3498db;
+  --transition: all 0.3s ease;
 }
 
-html {
-  scroll-behavior: smooth;
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --text-primary: #f8f9fa;
+  --bg-secondary: #1e1e1e;
+  --text-secondary: #adb5bd;
+  --accent-color: #1e88e5;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition);
 }

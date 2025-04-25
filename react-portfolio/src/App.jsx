@@ -1,21 +1,35 @@
-import _styles from "./App.module.css";
-import { About } from "./components/About/About";
-import { Contact } from "./components/Contact/Contact";
-import { Hero } from "./components/Hero/Hero";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Projects } from "./components/Projects/Projects";
-import { Experience } from "./components/experience/Experience";
+import React, { Suspense, lazy } from "react";
+import styles from "./App.module.css";
+import { ThemeProvider } from "./utils/ThemeContext";
+import ErrorBoundary from "./components/common/ErrorBoundary";
+import LoadingSpinner from "./components/common/LoadingSpinner";
+
+// Lazy load components
+const Navbar = lazy(() => import("./components/Navbar/Navbar"));
+const Hero = lazy(() => import("./components/Hero/Hero"));
+const About = lazy(() => import("./components/About/About"));
+const Experience = lazy(() => import("./components/experience/Experience"));
+const Projects = lazy(() => import("./components/Projects/Projects"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
 
 function App() {
   return (
-    <div className={_styles.App}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <div className={styles.App}>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Navbar />
+            <main>
+              <Hero />
+              <About />
+              <Experience />
+              <Projects />
+              <Contact />
+            </main>
+          </Suspense>
+        </div>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 
